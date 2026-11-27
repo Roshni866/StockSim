@@ -335,5 +335,3 @@ while trying a fresh dataset, point `db.url` at a new database name instead.
 * No password recovery or login rate limiting.
 * The Inter font is used if installed, otherwise a system font.
 * Snapshots are read-only records and cannot restore an account.
-#   S t o c k S i m  
- 
