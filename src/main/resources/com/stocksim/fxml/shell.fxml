@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane styleClass="shell" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stocksim.controller.ShellController">
+<top><HBox styleClass="top-bar" spacing="14" alignment="CENTER_LEFT">
+<Label text="▮▮ STOCKSIM" styleClass="brand" minWidth="-Infinity"/>
+<VBox><Label text="SIMULATION DATE" styleClass="metric-caption"/><Label fx:id="dateLabel" styleClass="top-value" minWidth="-Infinity"/></VBox>
+<Label fx:id="dayLabel" styleClass="top-value" minWidth="-Infinity"/>
+<Label fx:id="statusLabel" styleClass="badge" minWidth="-Infinity"/>
+<Label fx:id="scenarioLabel" styleClass="scenario-label" visible="false" managed="false" minWidth="0"/>
+<Region HBox.hgrow="ALWAYS"/>
+<ProgressIndicator fx:id="busy" prefWidth="18" prefHeight="18" maxWidth="18" maxHeight="18"/>
+<Label fx:id="sourceLabel" styleClass="source-label" minWidth="0"/>
+<Button fx:id="bellButton" text="Alerts" styleClass="bell" minWidth="-Infinity" accessibleText="Notifications"/>
+<MenuButton fx:id="userMenu" minWidth="-Infinity"/>
+</HBox></top>
+<left><ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" styleClass="sidebar-scroll"><VBox fx:id="sidebar" styleClass="sidebar" spacing="2"/></ScrollPane></left>
+<center><StackPane>
+<ScrollPane fx:id="content" fitToWidth="true" fitToHeight="true" styleClass="content-scroll"/>
+<VBox fx:id="toasts" spacing="8" alignment="BOTTOM_RIGHT" pickOnBounds="false" styleClass="toasts"/>
+</StackPane></center>
+</BorderPane>

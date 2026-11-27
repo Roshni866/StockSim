@@ -1,0 +1,14 @@
+target/
+reports/
+*.ser
+*.log
+.DS_Store
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+stocksim.local.properties
+logs/
+data/*.csv

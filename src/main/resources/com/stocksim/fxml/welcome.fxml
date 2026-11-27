@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<StackPane styleClass="auth-screen" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.stocksim.controller.WelcomeController"><ScrollPane fitToWidth="true" fitToHeight="true" styleClass="auth-scroll"><StackPane><VBox styleClass="auth-card" spacing="10" maxWidth="520" maxHeight="-Infinity"><StackPane.margin><Insets top="24" bottom="24" left="16" right="16"/></StackPane.margin><Label text="STOCKSIM" styleClass="brand-large"/><Label text="Market simulation and portfolio analytics" styleClass="page-title"/><Label text="Practise trading with virtual money, replay history day by day, stress-test your portfolio and backtest simple strategies. No real money and no live market data are involved." styleClass="muted" wrapText="true" minHeight="-Infinity"/><Button text="Sign in" onAction="#openLogin" styleClass="primary" minWidth="-Infinity" maxWidth="Infinity" defaultButton="true"/><Button text="Create an account" onAction="#openRegister" minWidth="-Infinity" maxWidth="Infinity"/></VBox></StackPane></ScrollPane></StackPane>

@@ -1,0 +1,210 @@
+/*
+ * StockSim terminal theme.
+ * All sizes are in em, so changing the single root font size scales the interface.
+ */
+.root {
+    -fx-font-family: "Inter", "SF Pro Text", "Segoe UI", "Helvetica Neue", "System";
+    -fx-font-size: 12.5px;
+
+    -ss-bg: #101820;
+    -ss-surface: #18232D;
+    -ss-panel: #202D38;
+    -ss-border: #34424D;
+    -ss-text: #E4EAF0;
+    -ss-muted: #9BAAB6;
+    -ss-amber: #D6A84B;
+    -ss-green: #1FA67A;
+    -ss-red: #D95C62;
+    -ss-blue: #5B8DB8;
+
+    /* Re-colours JavaFX's built-in controls and popups. */
+    -fx-base: #202D38;
+    -fx-background: #101820;
+    -fx-control-inner-background: #18232D;
+    -fx-control-inner-background-alt: #1B2832;
+    -fx-accent: #3D5F7C;
+    -fx-focus-color: #D6A84B;
+    -fx-faint-focus-color: transparent;
+    -fx-text-base-color: #E4EAF0;
+    -fx-text-background-color: #E4EAF0;
+    -fx-text-inner-color: #E4EAF0;
+    -fx-prompt-text-fill: #758592;
+    -fx-background-color: -ss-bg;
+}
+
+.label { -fx-text-fill: -ss-text; }
+.muted, .label.muted { -fx-text-fill: -ss-muted; }
+.label.hint { -fx-text-fill: -ss-muted; -fx-font-size: 0.9em; }
+.label.accent { -fx-text-fill: -ss-amber; }
+.label.positive, .table-cell.positive { -fx-text-fill: -ss-green; }
+.label.negative, .table-cell.negative { -fx-text-fill: -ss-red; }
+.error-label, .label.error-label { -fx-text-fill: -ss-red; }
+
+/* ---------- Shell ---------- */
+.top-bar {
+    -fx-background-color: -ss-surface;
+    -fx-border-color: transparent transparent -ss-border transparent;
+    -fx-padding: 0.45em 1em;
+}
+.label.brand { -fx-text-fill: -ss-amber; -fx-font-weight: bold; -fx-font-size: 1.25em; -fx-min-width: 13em; }
+.label.top-value { -fx-font-weight: bold; }
+.badge, .label.badge { -fx-padding: 0.15em 0.7em; -fx-font-size: 0.85em; -fx-font-weight: bold; -fx-border-radius: 2; -fx-border-color: -ss-border; }
+.label.badge-green { -fx-text-fill: -ss-green; -fx-border-color: -ss-green; }
+.label.badge-amber { -fx-text-fill: -ss-amber; -fx-border-color: -ss-amber; }
+.label.badge-red { -fx-text-fill: -ss-red; -fx-border-color: -ss-red; }
+.label.scenario-label { -fx-text-fill: -ss-amber; }
+.label.source-label { -fx-text-fill: -ss-muted; -fx-font-size: 0.82em; }
+.bell.has-alerts { -fx-border-color: -ss-amber; -fx-text-fill: -ss-amber; }
+
+.sidebar-scroll, .sidebar { -fx-background-color: -ss-surface; }
+.sidebar-scroll { -fx-padding: 0; -fx-border-color: transparent -ss-border transparent transparent; }
+.sidebar-scroll > .viewport { -fx-background-color: -ss-surface; }
+.sidebar { -fx-pref-width: 15em; -fx-padding: 0.5em 0; }
+.label.nav-section { -fx-text-fill: #6F808D; -fx-font-size: 0.82em; -fx-font-weight: bold; -fx-padding: 1.2em 1.4em 0.4em 1.4em; }
+.button.nav-button {
+    -fx-alignment: center-left;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-background-radius: 0;
+    -fx-padding: 0.6em 1.3em;
+}
+.button.nav-button:hover { -fx-background-color: -ss-panel; }
+.button.nav-button.active { -fx-background-color: -ss-panel; -fx-border-color: transparent transparent transparent -ss-amber; -fx-text-fill: -ss-amber; -fx-font-weight: bold; }
+.button.nav-button:focused { -fx-background-color: -ss-panel; }
+
+/* ---------- Pages and panels ---------- */
+.scroll-pane { -fx-background-color: transparent; -fx-background: -ss-bg; -fx-padding: 0; }
+.scroll-pane > .viewport { -fx-background-color: -ss-bg; }
+.page { -fx-padding: 1em; -fx-background-color: -ss-bg; }
+.label.page-title { -fx-font-size: 1.5em; -fx-font-weight: bold; }
+.panel { -fx-background-color: -ss-panel; -fx-border-color: -ss-border; -fx-border-radius: 2; -fx-background-radius: 2; -fx-padding: 0.8em; }
+.label.panel-title { -fx-text-fill: -ss-muted; -fx-font-size: 0.85em; -fx-font-weight: bold; }
+.label.card-title { -fx-font-size: 1.15em; -fx-font-weight: bold; }
+.label.big-price { -fx-font-size: 1.7em; -fx-font-weight: bold; }
+.label.summary { -fx-background-color: -ss-surface; -fx-border-color: transparent transparent transparent -ss-blue; -fx-border-width: 0 0 0 3; -fx-padding: 0.7em 1em; }
+.label.empty-state { -fx-text-alignment: center; -fx-alignment: center; }
+
+.metric { -fx-background-color: -ss-panel; -fx-border-color: -ss-border; -fx-border-radius: 2; -fx-padding: 0.6em 0.9em; -fx-min-width: 13em; }
+.label.metric-caption { -fx-text-fill: -ss-muted; -fx-font-size: 0.78em; -fx-font-weight: bold; }
+.label.metric-value { -fx-font-size: 1.4em; -fx-font-weight: bold; }
+.label.metric-hint { -fx-text-fill: -ss-muted; -fx-font-size: 0.85em; }
+
+.scenario-card { -fx-background-color: -ss-panel; -fx-border-color: -ss-border; -fx-border-radius: 2; -fx-padding: 0.8em; }
+.active-scenario { -fx-border-color: -ss-amber; }
+.label.event-title { -fx-font-weight: bold; }
+.label.event-meta { -fx-text-fill: -ss-amber; -fx-font-size: 0.85em; }
+.event { -fx-border-color: transparent transparent -ss-border transparent; -fx-padding: 0 0 0.5em 0; }
+.label.warning { -fx-padding: 0.6em 0.9em; -fx-background-color: -ss-surface; -fx-border-width: 0 0 0 3; }
+.label.warning-high { -fx-border-color: transparent transparent transparent -ss-red; }
+.label.warning-elevated { -fx-border-color: transparent transparent transparent -ss-amber; }
+
+.form-grid { -fx-hgap: 1.4em; -fx-vgap: 0.5em; }
+.heatmap { -fx-hgap: 2; -fx-vgap: 2; }
+.heatmap .label { -fx-padding: 0.35em 0.6em; -fx-min-width: 6.5em; -fx-alignment: center; }
+
+/* ---------- Controls ---------- */
+.button, .toggle-button, .menu-button, .combo-box-base, .text-field, .date-picker {
+    -fx-background-radius: 2;
+    -fx-border-radius: 2;
+}
+.button, .toggle-button, .menu-button {
+    -fx-background-color: -ss-panel;
+    -fx-border-color: -ss-border;
+    -fx-text-fill: -ss-text;
+    -fx-padding: 0.45em 0.95em;
+    -fx-cursor: hand;
+}
+.menu-button { -fx-padding: 0; }
+.button:hover, .toggle-button:hover, .menu-button:hover { -fx-border-color: -ss-blue; }
+.button:focused, .toggle-button:focused, .menu-button:focused { -fx-border-color: -ss-amber; }
+.button.primary { -fx-background-color: -ss-amber; -fx-border-color: -ss-amber; -fx-text-fill: -ss-bg; -fx-font-weight: bold; }
+.button.buy { -fx-background-color: -ss-green; -fx-border-color: -ss-green; -fx-text-fill: #06120D; -fx-font-weight: bold; }
+.button.sell { -fx-background-color: -ss-red; -fx-border-color: -ss-red; -fx-text-fill: #1A0708; -fx-font-weight: bold; }
+.button.primary:focused, .button.buy:focused, .button.sell:focused { -fx-border-color: -ss-text; }
+.button.danger { -fx-text-fill: -ss-red; }
+.button.link-button { -fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: -ss-blue; -fx-padding: 0.3em 0; }
+.button.link-button:focused { -fx-underline: true; }
+.segmented .toggle-button { -fx-background-radius: 0; -fx-border-radius: 0; -fx-min-width: 3.6em; }
+.segmented .toggle-button:selected { -fx-background-color: -ss-blue; -fx-text-fill: -ss-bg; -fx-font-weight: bold; }
+.text-field { -fx-prompt-text-fill: #7F909D; -fx-background-color: -ss-surface; -fx-border-color: -ss-border; -fx-padding: 0.45em 0.7em; }
+.text-field:focused { -fx-border-color: -ss-amber; }
+.date-picker > .text-field { -fx-border-color: transparent; }
+.combo-box-base { -fx-background-color: -ss-surface; -fx-border-color: -ss-border; }
+.combo-box-base:focused { -fx-border-color: -ss-amber; }
+.progress-bar > .track { -fx-background-color: -ss-surface; -fx-background-radius: 1; }
+.progress-bar > .bar { -fx-background-color: -ss-amber; -fx-background-radius: 1; -fx-background-insets: 0; -fx-padding: 0.35em; }
+
+/* ---------- Tables and lists ---------- */
+.table-view { -fx-background-color: -ss-surface; -fx-border-color: -ss-border; -fx-padding: 0; }
+.table-view .column-header-background, .table-view .column-header, .table-view .filler { -fx-background-color: -ss-surface; }
+.table-view .column-header, .table-view .filler { -fx-border-color: transparent transparent -ss-border transparent; -fx-size: 2.3em; }
+.table-view .column-header .label { -fx-text-fill: -ss-muted; -fx-font-size: 0.9em; }
+.table-row-cell { -fx-cell-size: 2.2em; }
+.table-row-cell:selected { -fx-background-color: -fx-accent; }
+.table-row-cell:selected .table-cell.positive { -fx-text-fill: #7FF0C6; }
+.table-row-cell:selected .table-cell.negative { -fx-text-fill: #FFC2C5; }
+.table-cell { -fx-border-color: transparent; -fx-padding: 0 0.6em; }
+
+.list-view { -fx-background-color: -ss-surface; -fx-border-color: -ss-border; -fx-padding: 1; }
+
+/* ---------- Tabs ---------- */
+.tab-pane > .tab-header-area > .tab-header-background { -fx-background-color: -ss-surface; }
+.tab-pane .tab { -fx-background-color: transparent; -fx-background-radius: 0; -fx-padding: 0.45em 1.1em; -fx-border-width: 0 0 2 0; -fx-border-color: transparent; }
+.tab-pane .tab:selected { -fx-border-color: transparent transparent -ss-amber transparent; }
+.tab-pane .tab:selected .tab-label { -fx-text-fill: -ss-amber; -fx-font-weight: bold; }
+.tab-pane .tab .focus-indicator { -fx-border-color: transparent; }
+
+/* ---------- Charts ---------- */
+.chart { -fx-padding: 0 1.4em 0 0; }
+.chart-plot-background { -fx-background-color: -ss-surface; }
+.chart-vertical-grid-lines, .chart-horizontal-grid-lines { -fx-stroke: #2A3843; }
+.chart-vertical-zero-line, .chart-horizontal-zero-line { -fx-stroke: -ss-border; }
+.chart-alternative-row-fill { -fx-fill: transparent; }
+.axis { -fx-tick-label-fill: -ss-muted; -fx-tick-label-font-size: 0.85em; }
+.axis-label { -fx-text-fill: -ss-muted; }
+.chart-legend { -fx-background-color: transparent; }
+.chart-legend-item { -fx-text-fill: -ss-text; }
+.chart-series-line { -fx-stroke-width: 1.6px; }
+.default-color0.chart-series-line { -fx-stroke: -ss-amber; }
+.default-color1.chart-series-line { -fx-stroke: -ss-blue; }
+.default-color2.chart-series-line { -fx-stroke: #B48BD0; }
+.default-color0.chart-line-symbol { -fx-background-color: -ss-amber; }
+.default-color1.chart-line-symbol { -fx-background-color: -ss-blue; }
+.default-color2.chart-line-symbol { -fx-background-color: #B48BD0; }
+.default-color0.chart-bar { -fx-bar-fill: -ss-blue; }
+.default-color1.chart-bar { -fx-bar-fill: -ss-amber; }
+.default-color0.chart-bar.bar-positive { -fx-bar-fill: -ss-green; }
+.default-color0.chart-bar.bar-negative { -fx-bar-fill: -ss-red; }
+.chart-bar { -fx-background-radius: 0; }
+.default-color0.chart-pie { -fx-pie-color: #D6A84B; }
+.default-color1.chart-pie { -fx-pie-color: #5B8DB8; }
+.default-color2.chart-pie { -fx-pie-color: #1FA67A; }
+.default-color3.chart-pie { -fx-pie-color: #B48BD0; }
+.default-color4.chart-pie { -fx-pie-color: #D95C62; }
+.default-color5.chart-pie { -fx-pie-color: #56B6B2; }
+.default-color6.chart-pie { -fx-pie-color: #C98255; }
+.default-color7.chart-pie { -fx-pie-color: #8FA3B3; }
+.chart-pie { -fx-border-color: -ss-panel; }
+
+/* Backtest trade markers are chart series whose connecting line is hidden. */
+.marker-chart .chart-series-line.marker-line { -fx-stroke: transparent; }
+.marker-chart .default-color2.chart-line-symbol { -fx-background-color: -ss-green; -fx-background-insets: 0; -fx-background-radius: 0; -fx-shape: "M0 10 L5 0 L10 10 Z"; -fx-padding: 6; }
+.marker-chart .default-color3.chart-line-symbol { -fx-background-color: -ss-red; -fx-background-insets: 0; -fx-background-radius: 0; -fx-shape: "M0 0 L10 0 L5 10 Z"; -fx-padding: 6; }
+
+/* ---------- Sign-in screens ---------- */
+.auth-screen { -fx-background-color: -ss-bg; }
+.auth-card { -fx-background-color: -ss-panel; -fx-border-color: -ss-border; -fx-border-radius: 3; -fx-padding: 2em; }
+.label.brand-large { -fx-text-fill: -ss-amber; -fx-font-size: 2em; -fx-font-weight: bold; }
+.label.capital-value { -fx-text-fill: -ss-green; -fx-font-size: 2.6em; -fx-font-weight: bold; }
+
+/* ---------- Notifications and dialogs ---------- */
+.toasts { -fx-padding: 1em; }
+.toast { -fx-background-color: -ss-surface; -fx-border-color: -ss-border -ss-border -ss-border -ss-blue; -fx-border-width: 1 1 1 4; -fx-padding: 0.7em 1em; -fx-cursor: hand; }
+.toast-success { -fx-border-color: -ss-border -ss-border -ss-border -ss-green; }
+.toast-warning { -fx-border-color: -ss-border -ss-border -ss-border -ss-amber; }
+.toast-error { -fx-border-color: -ss-border -ss-border -ss-border -ss-red; }
+.label.toast-title { -fx-font-weight: bold; }
+.label.toast-body { -fx-text-fill: -ss-muted; }
+.dialog-pane { -fx-background-color: -ss-panel; }
+.dialog-pane > .header-panel { -fx-background-color: -ss-surface; }
