@@ -1,14 +1,28 @@
 # StockSim
 
-A desktop stock market simulator and portfolio analytics workspace built with
-**Java, JavaFX (FXML + CSS), MySQL, JDBC, Maven and JUnit**. All money is virtual.
-There is no live market data and nothing here is financial advice.
+StockSim is an educational desktop stock-market simulator and portfolio-analytics
+workspace built with **Java 17+, JavaFX, MySQL, JDBC, Maven, and JUnit 5**.
+
+It uses virtual money and simulated prices. It does not connect to a live exchange
+and is not financial advice.
 
 ![Overview](docs/screenshots/overview.png)
 
----
+## Contents
 
-## 1. What it does
+- [Features](#features)
+- [Setup](#2-setup)
+- [Price data](#3-price-data)
+- [Configuration](#4-configuration)
+- [Testing](#8-tests)
+- [Project structure](#7-project-structure)
+- [How the simulation works](#6-how-the-simulation-works)
+- [Demo workflow](#10-demonstration-workflow)
+- [Screenshots](#11-screenshots)
+- [Troubleshooting](#troubleshooting)
+- [Known limitations](#12-known-limitations)
+
+## Features
 
 | Workspace | Features |
 |---|---|
@@ -33,6 +47,8 @@ scenario results.
 
 Requirements: JDK 17 or newer, MySQL 8.0+, and Maven 3.9+ (IntelliJ IDEA includes
 Maven, so you do not need to install it separately if you run from the IDE).
+
+### Quick start
 
 ### Windows
 
@@ -287,6 +303,25 @@ virtual display; 46 without one.
 | ![Risk](docs/screenshots/risk.png) | ![Performance](docs/screenshots/performance.png) |
 
 ---
+
+## Troubleshooting
+
+### StockSim cannot reach MySQL
+
+Confirm that the MySQL service is running, then check `db.user` and `db.password`
+in `stocksim.local.properties`. If MySQL is not on the default port, override
+`db.url` as described in [Configuration](#4-configuration).
+
+### Maven cannot find JavaFX or Java
+
+Run `java -version` and `mvn -version` and confirm that Maven is using JDK 17 or
+newer. If the versions differ, set `JAVA_HOME` to the intended JDK and open a new
+terminal.
+
+### I want to start over
+
+Use **Settings > Reset** for the current account. To preserve the old database
+while trying a fresh dataset, point `db.url` at a new database name instead.
 
 ## 12. Known limitations
 
